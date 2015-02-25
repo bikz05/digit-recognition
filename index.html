@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Digit Recognition by bikz05</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Digit Recognition</h1>
+        <p>Handwritten Digit Recognition using OpenCV, sklearn and Python</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/bikz05/digit-recognition" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/bikz05/digit-recognition/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/bikz05/digit-recognition/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>
+<a id="digit-recognition" class="anchor" href="#digit-recognition" aria-hidden="true"><span class="octicon octicon-link"></span></a>Digit Recognition</h1>
+
+<p>Handwritten Digit Recognition using OpenCV, sklearn and Python</p>
+
+<p><strong>Check out the blog post <a href="http://hanzratech.in/python/handwritten-digit-recognition-using-opencv-sklearn-and-python/">here</a> for complete notes on how the code works.</strong></p>
+
+<h1>
+<a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependencies</h1>
+
+<ol>
+<li><code>cv2</code></li>
+<li><code>sklearn</code></li>
+<li><code>skimage</code></li>
+<li><code>numpy</code></li>
+<li><code>collections</code></li>
+</ol>
+
+<h1>
+<a id="contents" class="anchor" href="#contents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contents</h1>
+
+<p>This repository contains the following files-</p>
+
+<ol>
+<li>
+<code>generateClassifier.py</code> - Python Script to create the classifier file <code>digits_cls.pkl</code>.</li>
+<li>
+<code>performRecognition.py</code> - Python Script to test the classifier.</li>
+<li>
+<code>digits_cls.pkl</code> - Classifier file for digit recognition.</li>
+<li>
+<code>photo_1.jpg</code> - Test image number 1 to test the classifier</li>
+<li>
+<code>photo_2.jpg</code> - Test image numbre 2 to test the classifier</li>
+</ol>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<ul>
+<li>Clone the repository - </li>
+</ul>
+
+<div class="highlight highlight-bash"><pre><span class="pl-s3">cd</span> 
+git clone https://github.com/bikz05/digit-recognition.git
+<span class="pl-s3">cd</span> digit-recognition</pre></div>
+
+<ul>
+<li>The next step is to train the classifier. To do so run the script <code>generateClassifier.py</code>. It will produce the classifier named <code>digits_cls.pkl</code>. </li>
+</ul>
+
+<p><strong>NOTE</strong> - <em>I have already created the <code>digits_cls.pkl</code>, so this step is not necessary.</em></p>
+
+<div class="highlight highlight-python"><pre>python generateClassifier.py</pre></div>
+
+<ul>
+<li>To test the classifier, run the <code>performRecognition.py</code> script.</li>
+</ul>
+
+<div class="highlight highlight-python"><pre>python performRecognition.py</pre></div>
+
+<h2>
+<a id="results" class="anchor" href="#results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results</h2>
+
+<h3>
+<a id="sample-image-1" class="anchor" href="#sample-image-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample Image 1</h3>
+
+<p><img src="http://hanzratech.in/wp-content/uploads/2015/02/final_1.png" alt="Result Number 1"></p>
+
+<h3>
+<a id="sample-image-2" class="anchor" href="#sample-image-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample Image 2</h3>
+
+<p><img src="http://hanzratech.in/wp-content/uploads/2015/02/final2.png" alt="Result Number 2"></p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/bikz05">bikz05</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>

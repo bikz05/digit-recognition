@@ -21,19 +21,19 @@ This repository contains the following files-
 
 ## Usage 
 
-1. Clone the repository - 
+* Clone the repository - 
 ```bash
 cd 
 git clone https://github.com/bikz05/digit-recognition.git
 cd digit-recognition
 ```
-2. The next step is to train the classifier. To do so run the script `generateClassifier.py`. It will produce the classifier named `digits_cls.pkl`. 
+* The next step is to train the classifier. To do so run the script `generateClassifier.py`. It will produce the classifier named `digits_cls.pkl`. 
 
 **NOTE** - *I have already created the `digits_cls.pkl`, so this step is not necessary.*
 ```python
 python generateClassifier.py
 ```
-3. To test the classifier, run the `performRecognition.py` script.
+* To test the classifier, run the `performRecognition.py` script.
 ```python
 python performRecognition.py
 ```

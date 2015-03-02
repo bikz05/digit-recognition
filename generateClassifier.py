@@ -3,6 +3,7 @@ from sklearn.externals import joblib
 from sklearn import datasets
 from skimage.feature import hog
 from sklearn.svm import LinearSVC
+from sklearn import preprocessing
 import numpy as np
 from collections import Counter
 
@@ -20,6 +21,10 @@ for feature in features:
     list_hog_fd.append(fd)
 hog_features = np.array(list_hog_fd, 'float64')
 
+# Normalize the features
+pp = preprocessing.StandardScaler().fit(hog_features)
+hog_features = pp.transform(hog_features)
+
 print "Count of digits in dataset", Counter(labels)
 
 # Create an linear SVM object
@@ -29,4 +34,4 @@ clf = LinearSVC()
 clf.fit(hog_features, labels)
 
 # Save the classifier
-joblib.dump(clf, "digits_cls.pkl", compress=3)
+joblib.dump((clf, pp), "digits_cls.pkl", compress=3)

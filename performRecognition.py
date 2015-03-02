@@ -5,7 +5,7 @@ from skimage.feature import hog
 import numpy as np
 
 # Load the classifier
-clf = joblib.load("digits_cls.pkl")
+clf, pp = joblib.load("digits_cls.pkl")
 
 # Read the input image 
 im = cv2.imread("photo_2.jpg")
@@ -38,8 +38,10 @@ for rect in rects:
     roi = cv2.dilate(roi, (3, 3))
     # Calculate the HOG features
     roi_hog_fd = hog(roi, orientations=9, pixels_per_cell=(14, 14), cells_per_block=(1, 1), visualise=False)
-    nbr = clf.predict(np.array([roi_hog_fd], 'float64'))
+    roi_hog_fd = pp.transform(np.array([roi_hog_fd], 'float64'))
+    nbr = clf.predict(roi_hog_fd)
     cv2.putText(im, str(int(nbr[0])), (rect[0], rect[1]),cv2.FONT_HERSHEY_DUPLEX, 2, (0, 255, 255), 3)
 
+cv2.namedWindow("Resulting Image with Rectangular ROIs", cv2.WINDOW_NORMAL)
 cv2.imshow("Resulting Image with Rectangular ROIs", im)
 cv2.waitKey()

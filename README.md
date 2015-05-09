@@ -41,6 +41,6 @@ python performRecognition.py
 ## Results
 
 ### Sample Image 1
-![Result Number 1](http://hanzratech.in/wp-content/uploads/2015/02/final_1.png)
+![Result Number 1](http://hanzratech.in/figures/digit-reco-1-out.png)
 ### Sample Image 2
-![Result Number 2](http://hanzratech.in/wp-content/uploads/2015/02/final2.png)
+![Result Number 2](http://hanzratech.in/figures/digit-reco-2.png)

@@ -35,7 +35,11 @@ python generateClassifier.py
 ```
 * To test the classifier, run the `performRecognition.py` script.
 ```python
-python performRecognition.py
+python performRecognition.py -c <path to classifier file> -i <path to test image>
+```
+ex -
+```python
+python performRecognition.py -c digits_cls.pkl -i photo_1.jpg
 ```
 
 ## Results

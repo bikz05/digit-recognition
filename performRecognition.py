@@ -3,12 +3,19 @@ import cv2
 from sklearn.externals import joblib
 from skimage.feature import hog
 import numpy as np
+import argparse as ap
+
+# Get the path of the training set
+parser = ap.ArgumentParser()
+parser.add_argument("-c", "--classiferPath", help="Path to Classifier File", required="True")
+parser.add_argument("-i", "--image", help="Path to Image", required="True")
+args = vars(parser.parse_args())
 
 # Load the classifier
-clf, pp = joblib.load("digits_cls.pkl")
+clf, pp = joblib.load(args["classiferPath"])
 
 # Read the input image 
-im = cv2.imread("photo_2.jpg")
+im = cv2.imread(args["image"])
 
 # Convert to grayscale and apply Gaussian filtering
 im_gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)

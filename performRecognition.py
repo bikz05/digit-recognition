@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 # Import the modules
 import cv2
 from sklearn.externals import joblib

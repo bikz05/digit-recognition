@@ -48,3 +48,9 @@ python performRecognition.py -c digits_cls.pkl -i photo_1.jpg
 ![Result Number 1](http://hanzratech.in/figures/digit-reco-1-out.png)
 ### Sample Image 2
 ![Result Number 2](http://hanzratech.in/figures/digit-reco-2.png)
+
+## TODO
+
+* Add a CNN Based approach
+* Reject bounding boxes lesser than some area
+* Look into user errors
